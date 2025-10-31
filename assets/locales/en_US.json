@@ -265,8 +265,7 @@
     "resetPasswordFailed": "Password reset failed",
     "changePasswordSuccess": "Password changed successfully",
     "changePasswordFailed": "Password change failed",
-    "noResponseFromSystem": "No response from system, please try again",
-    "productOfLamBaoBao": "Product by LamBaoBao"
+    "noResponseFromSystem": "No response from system, please try again"
   },
   "login": {
     "loginSessionExpired": "Your session has expired. Please log in again",
@@ -282,7 +281,8 @@
     "passwordMustContainAtLeastOneNumber": "Password must contain at least one number",
     "passwordMustContainAtLeastOneSpecialCharacter": "Password must contain at least one special character",
     "changeAccount": "Change account",
-    "changeAccountConfirm": "Do you want to change your account"
+    "changeAccountConfirm": "Do you want to change your account",
+    "productOfLamBaoBao": "Product by LamBaoBao"
   },
   "concentration": {
     "behaviorCompositeScore": "Behavior composite score",
