@@ -7,7 +7,7 @@ Widget _buildBody(LoginController controller) {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Container(
+          SizedBox(
             width: double.infinity,
             height: Get.height,
             child: Column(
@@ -290,7 +290,7 @@ Widget _buildLoginButton(LoginController controller) {
   return Obx(
     () => BaseButton.buildButton(
       LocaleKeys.app_loginTitle.tr,
-      () => controller.navToHome(),
+      () => controller.navToHomeWithoutLogIn(),
       colors: AppColors.colorBtnPrimaryBlue,
       isLoading: controller.isShowLoading.value,
     ).paddingAll(AppDimens.paddingSmall),

@@ -41,6 +41,24 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_account.svg
   String get icAccount => 'assets/icons/ic_account.svg';
 
+  /// File path: assets/icons/ic_home.svg
+  String get icHome => 'assets/icons/ic_home.svg';
+
+  /// File path: assets/icons/ic_home_blue.svg
+  String get icHomeBlue => 'assets/icons/ic_home_blue.svg';
+
+  /// File path: assets/icons/ic_notification.svg
+  String get icNotification => 'assets/icons/ic_notification.svg';
+
+  /// File path: assets/icons/ic_notification_blue.svg
+  String get icNotificationBlue => 'assets/icons/ic_notification_blue.svg';
+
+  /// File path: assets/icons/ic_user.svg
+  String get icUser => 'assets/icons/ic_user.svg';
+
+  /// File path: assets/icons/ic_user_blue.svg
+  String get icUserBlue => 'assets/icons/ic_user_blue.svg';
+
   /// File path: assets/icons/icon_change_user.svg
   String get iconChangeUser => 'assets/icons/icon_change_user.svg';
 
@@ -49,6 +67,9 @@ class $AssetsIconsGen {
 
   /// File path: assets/icons/icon_fingerprint.svg
   String get iconFingerprint => 'assets/icons/icon_fingerprint.svg';
+
+  /// File path: assets/icons/icon_globe.svg
+  String get iconGlobe => 'assets/icons/icon_globe.svg';
 
   /// File path: assets/icons/icon_language_en.png
   AssetGenImage get iconLanguageEn =>
@@ -60,6 +81,9 @@ class $AssetsIconsGen {
 
   /// File path: assets/icons/icon_lock.svg
   String get iconLock => 'assets/icons/icon_lock.svg';
+
+  /// File path: assets/icons/icon_log_out.svg
+  String get iconLogOut => 'assets/icons/icon_log_out.svg';
 
   /// File path: assets/icons/icon_person.svg
   String get iconPerson => 'assets/icons/icon_person.svg';
@@ -80,12 +104,20 @@ class $AssetsIconsGen {
   /// List of all assets
   List<dynamic> get values => [
     icAccount,
+    icHome,
+    icHomeBlue,
+    icNotification,
+    icNotificationBlue,
+    icUser,
+    icUserBlue,
     iconChangeUser,
     iconFaceId,
     iconFingerprint,
+    iconGlobe,
     iconLanguageEn,
     iconLanguageVn,
     iconLock,
+    iconLogOut,
     iconPerson,
     iconSnackBarFail,
     iconSnackBarNotification,

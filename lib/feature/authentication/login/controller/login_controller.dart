@@ -74,6 +74,10 @@ class LoginController extends BaseGetxController {
     );
   }
 
+  void navToHomeWithoutLogIn(){
+    Get.toNamed(AppRoutes.routeHomePage);
+  }
+
   Future<bool> loginWithUsernamePassword(
       String userName,
       String passWord, {
