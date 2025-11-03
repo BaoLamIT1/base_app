@@ -33,7 +33,8 @@ class MainActivity : FlutterActivity() {
         val aliases = listOf(
             "$packageName.MainActivityAlias1",
             "$packageName.MainActivityAlias2",
-            "$packageName.MainActivityCRM"
+            "$packageName.MainActivityCRM",
+            "$packageName.MainActivityHRM"
         )
 
         // Disable tất cả alias
@@ -48,7 +49,6 @@ class MainActivity : FlutterActivity() {
         // Enable alias được chọn
         aliasName?.let {
             val target = "$packageName.$it"
-            Log.d("IconSwitcher", "Switching to alias: $target")
 
             pm.setComponentEnabledSetting(
                 ComponentName(packageName, target),

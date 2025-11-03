@@ -32,7 +32,7 @@ class SettingPage extends BaseGetWidget<SettingController> {
       appBar: buildAppBar(
         titleText: LocaleKeys.app_setting.tr,
         showActions: false,
-        showIcon: true,
+        showIcon: false,
         iconColor: AppColors.bg(),
       ),
       body: _buildBody(controller),

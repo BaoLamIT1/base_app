@@ -1,4 +1,5 @@
 import 'package:base_app/core/base/base_src.dart';
+import 'package:base_app/core/core.src.dart';
 import 'package:base_app/feature/change_icon/change_icon_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -12,10 +13,7 @@ class ChangeAppIconScreen extends BaseGetWidget<ChangeIconController> {
   @override
   Widget buildWidgets(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Đổi biểu tượng ứng dụng'),
-        centerTitle: true,
-      ),
+      appBar: buildAppBar(titleText: 'Đổi biểu tượng ứng dụng'),
       body: ListView.builder(
         padding: const EdgeInsets.all(16),
         itemCount: controller.icons.length,

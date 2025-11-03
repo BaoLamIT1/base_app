@@ -8,3 +8,12 @@ dart pub global activate get_cli
   get generate locales assets/locales
 - Khi thêm mới icon:
   fvm flutter pub run build_runner build
+- Khi đổi icon cho app:
+  - Android: 
+    Thêm ảnh vào android/app/src/main/res
+    Thêm native code vào android/app/src/main/kotlin/.../MainActivity.kt
+    Thêm vào AndroidManifest.xml
+    Thêm vào 
+  - IOS:
+   Thêm ảnh vào ios/Runner/Assets.xcassets/AppIcon.appiconset
+   Thêm vào Info.plist

@@ -15,14 +15,14 @@ class ChangeIconController extends BaseGetxController {
       asset: 'assets/icons/ic_launcher_alt1.png',
     ),
     AppIconItem(
-      alias: 'MainActivityAlias2',
+      alias: 'MainActivityCRM',
       name: 'Biểu tượng 2',
-      asset: 'assets/icons/ic_launcher_alt2.png',
+      asset: 'assets/icons/ic_logo_crm.png',
     ),
     AppIconItem(
-      alias: 'MainActivityCRM',
+      alias: 'MainActivityHRM',
       name: 'Biểu tượng 3',
-      asset: 'assets/icons/ic_logo_crm.png',
+      asset: 'assets/icons/ic_logo_hrm.png',
     ),
   ];
   Future<void> changeIcon(String alias) async {
