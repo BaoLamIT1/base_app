@@ -281,7 +281,6 @@ class LocaleKeys {
   static const app_changePasswordSuccess = 'app_changePasswordSuccess';
   static const app_changePasswordFailed = 'app_changePasswordFailed';
   static const app_noResponseFromSystem = 'app_noResponseFromSystem';
-  static const app_productOfLamBaoBao = 'app_productOfLamBaoBao';
   static const login_loginSessionExpired = 'login_loginSessionExpired';
   static const login_logInWrongAccountOrPassword =
       'login_logInWrongAccountOrPassword';
@@ -302,6 +301,7 @@ class LocaleKeys {
       'login_passwordMustContainAtLeastOneSpecialCharacter';
   static const login_changeAccount = 'login_changeAccount';
   static const login_changeAccountConfirm = 'login_changeAccountConfirm';
+  static const login_productOfLamBaoBao = 'login_productOfLamBaoBao';
   static const concentration_behaviorCompositeScore =
       'concentration_behaviorCompositeScore';
   static const concentration_individualConcentrationLevel =
@@ -376,7 +376,6 @@ class LocaleKeys {
   static const app_Morning = 'app_Morning';
   static const app_Afternoon = 'app_Afternoon';
   static const app_pleaseEnterFullOTP = 'app_pleaseEnterFullOTP';
-  static const login_productOfLamBaoBao = 'login_productOfLamBaoBao';
 }
 
 class Locales {
@@ -661,7 +660,6 @@ class Locales {
     'app_changePasswordSuccess': 'Password changed successfully',
     'app_changePasswordFailed': 'Password change failed',
     'app_noResponseFromSystem': 'No response from system, please try again',
-    'app_productOfLamBaoBao': 'Product by LamBaoBao',
     'login_loginSessionExpired':
         'Your session has expired. Please log in again',
     'login_logInWrongAccountOrPassword': 'Log in wrong account or password',
@@ -682,6 +680,7 @@ class Locales {
         'Password must contain at least one special character',
     'login_changeAccount': 'Change account',
     'login_changeAccountConfirm': 'Do you want to change your account',
+    'login_productOfLamBaoBao': 'Product by LamBaoBao',
     'concentration_behaviorCompositeScore': 'Behavior composite score',
     'concentration_individualConcentrationLevel':
         'Individual concentration level',

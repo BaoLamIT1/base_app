@@ -9,6 +9,8 @@ Widget _buildBody(SettingController controller) {
           _buildSettingList(controller),
           sdsSBHeight30,
           _buildLogoutSection(controller),
+          sdsSBHeight30,
+          _buildChangeIcon(controller),
         ],
       ),
     ),
@@ -69,6 +71,22 @@ Widget _buildLogoutSection(SettingController controller) {
       LocaleKeys.app_logout.tr,
       onTap: () {
         controller.onTapLogout();
+      },
+    ),
+  );
+}
+
+Widget _buildChangeIcon(SettingController controller) {
+  return Container(
+    decoration: BoxDecoration(
+      color: AppColors.white,
+      borderRadius: BorderRadius.circular(AppDimens.radius8),
+    ),
+    child: _buildListTitle(
+      Assets.icons.iconLogOut,
+      'change app icon',
+      onTap: () {
+        Get.to(ChangeAppIconScreen());
       },
     ),
   );

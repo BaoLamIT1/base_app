@@ -36,7 +36,7 @@ PreferredSizeWidget buildAppBar({
               onPressed: onTap != null ? () => onTap() : () => Get.back(),
               iconSize: 24,
             )
-            : null,
+            : SizedBox(),
     centerTitle: true,
     title: title ?? const SizedBox(),
     actions: actions,
