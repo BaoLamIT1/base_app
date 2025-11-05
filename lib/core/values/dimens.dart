@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:get/get.dart';
 
-
 // Tỉ lệ chiều cao so với màn hình thiết kế
 double ratioHeight = Get.height / AppDimens.heightDesign;
 // Tỉ lệ chiều ngang so với màn hình thiết kế
@@ -81,6 +80,7 @@ class AppDimens {
   static const double radius8 = 8;
   static const double radius4 = 4;
   static const double radius12 = 12;
+  static const double radius16 = 16;
   static const double radius20 = 20;
   static const double radius25 = 25;
   static const double radius30 = 30;
