@@ -1,4 +1,3 @@
-import 'package:base_app/core/base/base_src.dart';
 import 'package:base_app/core/core.src.dart';
 import 'package:base_app/feature/change_icon/change_icon_controller.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +14,7 @@ class ChangeAppIconScreen extends BaseGetWidget<ChangeIconController> {
     return Scaffold(
       appBar: buildAppBar(titleText: 'Đổi biểu tượng ứng dụng'),
       body: ListView.builder(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.all(AppDimens.padding16),
         itemCount: controller.icons.length,
         itemBuilder: (context, index) {
           final icon = controller.icons[index];
@@ -23,7 +22,7 @@ class ChangeAppIconScreen extends BaseGetWidget<ChangeIconController> {
           return Card(
             elevation: 2,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(16),
+              borderRadius: BorderRadius.circular(AppDimens.radius16),
             ),
             child: ListTile(
               leading: Image.asset(icon.asset, width: 48, height: 48),
@@ -33,8 +32,8 @@ class ChangeAppIconScreen extends BaseGetWidget<ChangeIconController> {
                       ? const Icon(Icons.check_circle, color: Colors.green)
                       : controller.isLoading
                       ? const SizedBox(
-                        width: 20,
-                        height: 20,
+                        width: AppDimens.padding20,
+                        height: AppDimens.padding20,
                         child: CircularProgressIndicator(strokeWidth: 2),
                       )
                       : null,

@@ -34,7 +34,7 @@ class MainActivity : FlutterActivity() {
             "$packageName.MainActivityAlias1",
             "$packageName.MainActivityAlias2",
             "$packageName.MainActivityCRM",
-            "$packageName.MainActivityHRM"
+            "$packageName.MainActivityHRM",
         )
 
         // Disable tất cả alias
