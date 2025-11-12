@@ -3,3 +3,4 @@ export 'input/input.src.dart';
 export 'text/text_utils.dart';
 export 'widgets/widgets.src.dart';
 export 'dio_log.dart';
+export 'camera_image_converter.dart';

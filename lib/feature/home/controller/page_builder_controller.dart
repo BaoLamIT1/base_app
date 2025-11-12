@@ -8,7 +8,7 @@ const _defaultPageIndex = 0;
 class PageBuilderController extends BaseGetxController
     with PopScopeCtrlMixin<void>, GetSingleTickerProviderStateMixin {
   final pageIndex = RxInt(_defaultPageIndex);
-  late final tabCtrl = TabController(length: 4, vsync: this);
+  late final tabCtrl = TabController(length: 2, vsync: this);
 
   @override
   void onInit() {
