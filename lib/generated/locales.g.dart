@@ -173,6 +173,7 @@ class LocaleKeys {
   static const app_birthday = 'app_birthday';
   static const app_gender = 'app_gender';
   static const app_cccd = 'app_cccd';
+  // ignore: constant_identifier_names
   static const app_information_parents = 'app_information_parents';
   static const app_phone_parents = 'app_phone_parents';
   static const app_fullName = 'app_fullName';

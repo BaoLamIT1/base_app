@@ -37,7 +37,7 @@ Widget _buildSettingList(SettingController controller) {
             trailingWidget: Obx(
               () => CupertinoSwitch(
                 value: controller.store.isFingerprintOrFaceID.value,
-                activeColor: AppColors.primaryColor,
+                activeTrackColor: AppColors.primaryColor,
                 onChanged: (value) async {
                   await controller.changeSettingBiometric(value);
                 },
@@ -86,7 +86,7 @@ Widget _buildChangeIcon(SettingController controller) {
       Assets.icons.iconLogOut,
       'change app icon',
       onTap: () {
-        Get.to(ChangeAppIconScreen());
+        Get.to(const ChangeAppIconScreen());
       },
     ),
   );

@@ -5,7 +5,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 
-import '../../../../core/base/app_controller/app_controller.dart';
 import '../../../../core/base/app_state_store/app_state_store.dart';
 import '../../../../core/core.src.dart';
 import '../../../../core/utils/widgets/keyboard.dart';
@@ -74,15 +73,15 @@ class LoginController extends BaseGetxController {
     );
   }
 
-  void navToHomeWithoutLogIn(){
+  void navToHomeWithoutLogIn() {
     Get.toNamed(AppRoutes.routePageBuilder);
   }
 
   Future<bool> loginWithUsernamePassword(
-      String userName,
-      String passWord, {
-        bool isAutoLogin = false,
-      }) async {
+    String userName,
+    String passWord, {
+    bool isAutoLogin = false,
+  }) async {
     if (!isAutoLogin) {
       KeyBoard.hide();
       if (!(formKey.currentState?.validate() ?? false)) return false;
@@ -90,7 +89,10 @@ class LoginController extends BaseGetxController {
     }
 
     try {
-      final userModel = await authRepository.loginWithUsernamePassword(userName, passWord);
+      final userModel = await authRepository.loginWithUsernamePassword(
+        userName,
+        passWord,
+      );
 
       if (userModel == null) {
         showSnackBar("Login failed");
@@ -98,7 +100,10 @@ class LoginController extends BaseGetxController {
       }
 
       // Lưu token (nếu API trả token, với Firebase thì lấy từ FirebaseAuth)
-      HIVE_APP.put(AppKey.keyToken, 'Bearer ${userModel.id}'); // hoặc lấy token thật
+      HIVE_APP.put(
+        AppKey.keyToken,
+        'Bearer ${userModel.id}',
+      ); // hoặc lấy token thật
       HIVE_APP.put(AppKey.keyRemember, true);
 
       final encryptedUsername = CryptoHelper.encrypt(userName);
@@ -123,6 +128,7 @@ class LoginController extends BaseGetxController {
       if (!isAutoLogin) hideLoading();
     }
   }
+
   Future<void> loginBiometric() async {
     if (!store.isFingerprintOrFaceID.value) {
       showSnackBar(LocaleKeys.biometric_biometricIsDisabled.tr);

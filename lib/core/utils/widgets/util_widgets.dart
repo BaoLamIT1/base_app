@@ -13,7 +13,6 @@ import '../../../gen/assets.gen.dart';
 import '../../base/themes/app_text_style.dart';
 import '../../values/colors.dart';
 import '../../values/dimens.dart';
-import '../input/text_input_model.dart';
 import '../utils.src.dart';
 
 PreferredSizeWidget buildAppBar({
@@ -36,7 +35,7 @@ PreferredSizeWidget buildAppBar({
               onPressed: onTap != null ? () => onTap() : () => Get.back(),
               iconSize: 24,
             )
-            : SizedBox(),
+            : const SizedBox(),
     centerTitle: true,
     title: title ?? const SizedBox(),
     actions: actions,
@@ -118,7 +117,7 @@ PreferredSizeWidget buildAppBarSearch({
                         controller: TextEditingController(),
                         decoration: InputDecoration(
                           hintText: 'Tìm kiếm',
-                          prefixIcon: Icon(Icons.search),
+                          prefixIcon: const Icon(Icons.search),
                           filled: true,
                           fillColor: Colors.white,
                           isDense: true,

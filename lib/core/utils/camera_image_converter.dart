@@ -194,8 +194,10 @@ class CameraImageConverter {
     Uint8List yuv420sp = image.bytes!;
     //int total = width * height;
     //Uint8List rgb = Uint8List(total);
-    final outImg =
-        img.Image(width: width, height: height); // default numChannels is 3
+    final outImg = img.Image(
+      width: width,
+      height: height,
+    ); // default numChannels is 3
 
     final int frameSize = width * height;
 
@@ -231,8 +233,13 @@ class CameraImageConverter {
 
         // I don't know how these r, g, b values are defined, I'm just copying what you had bellow and
         // getting their 8-bit values.
-        outImg.setPixelRgb(i, j, ((r << 6) & 0xff0000) >> 16,
-            ((g >> 2) & 0xff00) >> 8, (b >> 10) & 0xff);
+        outImg.setPixelRgb(
+          i,
+          j,
+          ((r << 6) & 0xff0000) >> 16,
+          ((g >> 2) & 0xff00) >> 8,
+          (b >> 10) & 0xff,
+        );
 
         /*rgb[yp] = 0xff000000 |
             ((r << 6) & 0xff0000) |
@@ -243,8 +250,11 @@ class CameraImageConverter {
     return outImg;
   }
 
-  static InputImage? inputImageFromCameraImage(CameraImage image,
-      CameraDescription camera, CameraController cameraController) {
+  static InputImage? inputImageFromCameraImage(
+    CameraImage image,
+    CameraDescription camera,
+    CameraController cameraController,
+  ) {
     final orientationMap = {
       DeviceOrientation.portraitUp: 0,
       DeviceOrientation.landscapeLeft: 90,
@@ -285,7 +295,9 @@ class CameraImageConverter {
     // * bgra8888 for iOS
     if (format == null ||
         (Platform.isAndroid && format != InputImageFormat.nv21) ||
-        (Platform.isIOS && format != InputImageFormat.bgra8888)) return null;
+        (Platform.isIOS && format != InputImageFormat.bgra8888)) {
+      return null;
+    }
 
     // since format is constraint to nv21 or bgra8888, both only have one plane
     if (image.planes.length != 1) return null;

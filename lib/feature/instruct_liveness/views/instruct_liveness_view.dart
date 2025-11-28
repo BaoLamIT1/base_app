@@ -21,9 +21,9 @@ Widget _buildBody(InstructLivenessController controller) {
                   ),
                   sdsSBHeight20,
                   TextUtils(
-                    text:LocaleKeys.app_LivenessGuideTitle.tr,
-                      availableStyle: StyleEnum.MbTitle1Bold,
-                      color: AppColors.MainBlack,
+                    text: LocaleKeys.app_LivenessGuideTitle.tr,
+                    availableStyle: StyleEnum.MbTitle1Bold,
+                    color: AppColors.mainBlack,
                   ),
                   sdsSBHeight16,
                   Column(
@@ -35,11 +35,11 @@ Widget _buildBody(InstructLivenessController controller) {
                   ),
                   sdsSBHeight16,
                   TextUtils(
-                    text:LocaleKeys.app_LivenessNote.tr,
-                      availableStyle: StyleEnum.MbBodyRegular,
-                      color: AppColors.StatusRed(),
-                      maxLine: 5,
-                      textAlign: TextAlign.left,
+                    text: LocaleKeys.app_LivenessNote.tr,
+                    availableStyle: StyleEnum.MbBodyRegular,
+                    color: AppColors.StatusRed(),
+                    maxLine: 5,
+                    textAlign: TextAlign.left,
                   ),
                 ],
               ),
@@ -54,13 +54,9 @@ Widget _buildBody(InstructLivenessController controller) {
 Widget _buildButton(InstructLivenessController controller) {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: AppDimens.padding16),
-    child: BaseButton.buildButton(
-      LocaleKeys.app_start.tr,
-      () {
-        controller.navigateToLiveness();
-      },
-      colors: AppColors.colorBtnPrimaryBlue,
-    ),
+    child: BaseButton.buildButton(LocaleKeys.app_start.tr, () {
+      controller.navigateToLiveness();
+    }, colors: AppColors.colorBtnPrimaryBlue),
   );
 }
 
@@ -77,9 +73,8 @@ Widget _buildItemText(String title, int number) {
         alignment: Alignment.center,
         child: TextUtils(
           text: '$number',
-          color:AppColors.white ,
+          color: AppColors.white,
           availableStyle: StyleEnum.MbBodyBold11,
-
         ),
       ),
       sdsSBWidth12,
@@ -87,7 +82,7 @@ Widget _buildItemText(String title, int number) {
         child: TextUtils(
           text: title,
           availableStyle: StyleEnum.MbBodyRegular,
-          color: AppColors.MainBlack,
+          color: AppColors.mainBlack,
           maxLine: 4,
           textAlign: TextAlign.left,
         ),

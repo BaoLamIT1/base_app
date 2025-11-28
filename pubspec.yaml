@@ -13,7 +13,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  flutter_localizations:
+    sdk: flutter
   flutter_local_notifications: ^17.2.3
   timezone: ^0.9.4
   permission_handler: ^11.3.1
@@ -66,6 +67,11 @@ dependencies:
   firebase_core: ^4.2.0
   flutter_launcher_icons: ^0.14.4
   percent_indicator: ^4.2.3
+  local_auth_android: ^1.0.52
+  local_auth_darwin: ^1.6.0
+  path_provider: ^2.1.5
+  image: ^4.5.4
+  google_mlkit_commons: ^0.8.1
 
 dev_dependencies:
   flutter_test:

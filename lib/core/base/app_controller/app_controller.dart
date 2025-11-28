@@ -20,7 +20,7 @@ class AppController extends GetxController {
 
   Future<void> _init() async {
     await Future.delayed(
-      Duration(milliseconds: 500),
+      const Duration(milliseconds: 500),
     ).then((_) => Get.offAllNamed(AppRoutes.routeLogIn));
     // await initHive();
     // state.isFaceID = await state.checkBiometricsFaceIdIos();
@@ -57,11 +57,11 @@ class AppController extends GetxController {
     Get.offAllNamed(AppRoutes.routeLogIn);
   }
 
-  @override
-  void onClose() {
-    super.onClose();
-    // webSocketService.disconnect();
-  }
+  //   @override
+  //   void onClose() {
+  //     super.onClose();
+  //     // webSocketService.disconnect();
+  //   }
 }
 
 Future<void> initHive() async {

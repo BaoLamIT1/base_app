@@ -312,29 +312,26 @@ Widget bodyLive(LivenessController controller) {
         top: 0,
         child: Align(
           alignment: Alignment.topCenter,
-          child: Container(
-            // height: Get.height / 9,
-            child: AppBar(
-              leading: IconButton(
-                onPressed: () async {
-                  Get.back();
-                  await controller.closePros();
-                },
-                icon: const Icon(Icons.arrow_back_ios, size: 16),
-              ),
-              backgroundColor: Colors.transparent,
-              iconTheme: Get.theme.iconTheme.copyWith(color: AppColors.bg()),
-              elevation: 0,
-              title: Text(
-                LocaleKeys.app_profileFaceID.tr,
-                style: TextStyle(
-                  color: AppColors.bg(),
-                  fontSize: 14,
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
-              centerTitle: true,
+          child: AppBar(
+            leading: IconButton(
+              onPressed: () async {
+                Get.back();
+                await controller.closePros();
+              },
+              icon: const Icon(Icons.arrow_back_ios, size: 16),
             ),
+            backgroundColor: Colors.transparent,
+            iconTheme: Get.theme.iconTheme.copyWith(color: AppColors.bg()),
+            elevation: 0,
+            title: Text(
+              LocaleKeys.app_profileFaceID.tr,
+              style: TextStyle(
+                color: AppColors.bg(),
+                fontSize: 14,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+            centerTitle: true,
           ),
         ) /*Container(
           alignment: Alignment.topLeft,

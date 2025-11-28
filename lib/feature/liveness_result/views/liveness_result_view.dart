@@ -36,13 +36,15 @@ Widget _buildInput(LivenessResultController controller) {
       ),
       const SizedBox(height: AppDimens.padding4),
       UtilWidgets.buildInput(
-          TextInputModel(
-              hintText: LocaleKeys.app_EnterFullName1.tr,
-              maxLength: 20,
-              size: 12,
-              isValidated: true,
-              textEditingController: controller.fullNameController),
-          readOnly: true),
+        TextInputModel(
+          hintText: LocaleKeys.app_EnterFullName1.tr,
+          maxLength: 20,
+          size: 12,
+          isValidated: true,
+          textEditingController: controller.fullNameController,
+        ),
+        readOnly: true,
+      ),
       sdsSBHeight15,
       TextUtils(
         text: LocaleKeys.app_studentId.tr,
@@ -51,13 +53,15 @@ Widget _buildInput(LivenessResultController controller) {
       ),
       const SizedBox(height: AppDimens.padding4),
       UtilWidgets.buildInput(
-          TextInputModel(
-              hintText: LocaleKeys.app_EnterStudentId.tr,
-              maxLength: 20,
-              size: 12,
-              isValidated: true,
-              textEditingController: controller.studentIdController),
-          readOnly: true),
+        TextInputModel(
+          hintText: LocaleKeys.app_EnterStudentId.tr,
+          maxLength: 20,
+          size: 12,
+          isValidated: true,
+          textEditingController: controller.studentIdController,
+        ),
+        readOnly: true,
+      ),
       sdsSBHeight15,
       TextUtils(
         text: LocaleKeys.app_classUnit.tr,
@@ -66,13 +70,15 @@ Widget _buildInput(LivenessResultController controller) {
       ),
       const SizedBox(height: AppDimens.padding4),
       UtilWidgets.buildInput(
-          TextInputModel(
-              hintText: LocaleKeys.app_EnterClassUnit.tr,
-              maxLength: 20,
-              size: 12,
-              isValidated: true,
-              textEditingController: controller.classNameController),
-          readOnly: true),
+        TextInputModel(
+          hintText: LocaleKeys.app_EnterClassUnit.tr,
+          maxLength: 20,
+          size: 12,
+          isValidated: true,
+          textEditingController: controller.classNameController,
+        ),
+        readOnly: true,
+      ),
     ],
   );
 }
@@ -94,10 +100,7 @@ Widget _buildFooter(LivenessResultController controller) {
               colors: AppColors.colorBasicWhite,
               colorText: AppColors.primaryColor,
               isLoading: controller.isShowLoading.value,
-              border: Border.all(
-                color: AppColors.primaryColor,
-                width: 1,
-              ),
+              border: Border.all(color: AppColors.primaryColor, width: 1),
             ).paddingOnly(right: AppDimens.padding8),
           ),
           Expanded(
@@ -129,25 +132,25 @@ Widget _buildImage(LivenessResultController controller) {
     children: [
       neutralImage.isNotEmpty
           ? Image.memory(
-              neutralImage,
-              width: 112.w,
-              height: 150.h,
-              fit: BoxFit.cover,
-              errorBuilder: (context, error, stackTrace) {
-                return Image.asset(
-                  Assets.images.imgIntructLiveness.path,
-                  width: 112.w,
-                  height: 150.h,
-                  fit: BoxFit.cover,
-                );
-              },
-            )
+            neutralImage,
+            width: 112.w,
+            height: 150.h,
+            fit: BoxFit.cover,
+            errorBuilder: (context, error, stackTrace) {
+              return Image.asset(
+                Assets.images.imgIntructLiveness.path,
+                width: 112.w,
+                height: 150.h,
+                fit: BoxFit.cover,
+              );
+            },
+          )
           : Image.asset(
-              Assets.images.imgIntructLiveness.path,
-              width: 112.w,
-              height: 150.h,
-              fit: BoxFit.cover,
-            ),
+            Assets.images.imgIntructLiveness.path,
+            width: 112.w,
+            height: 150.h,
+            fit: BoxFit.cover,
+          ),
     ],
   );
 }

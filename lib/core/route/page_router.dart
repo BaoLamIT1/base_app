@@ -19,9 +19,12 @@ class PageRouter {
     GetPage(name: AppRoutes.routeSettingPage, page: () => const SettingPage()),
     GetPage(
       name: AppRoutes.routeInstructLiveness,
-      page: () => InstructLivenessPage(),
+      page: () => const InstructLivenessPage(),
     ),
     GetPage(name: AppRoutes.routeLiveness, page: () => const LiveNessPage()),
-    GetPage(name: AppRoutes.routeLivenessResult, page: () => const LivenessResultPage()),
+    GetPage(
+      name: AppRoutes.routeLivenessResult,
+      page: () => const LivenessResultPage(),
+    ),
   ];
 }

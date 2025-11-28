@@ -49,7 +49,7 @@ class LivenessResultController extends BaseGetxController {
           LocaleKeys.app_addFaceSuccess.tr,
           typeAction: AppConst.actionSuccess,
         );
-        // store.setIsHasFace(true);
+        store.setIsHasFace(true);
         Get.until((route) => Get.currentRoute == AppRoutes.routeHomePage);
         // } else {
         //   showSnackBar(LocaleKeys.app_addFaceFailed.tr);

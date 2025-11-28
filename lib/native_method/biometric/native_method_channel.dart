@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 
-import '../../core/base/app_controller/app_controller.dart';
 import '../../core/core.src.dart';
 
 class NativeMethodChannel {
