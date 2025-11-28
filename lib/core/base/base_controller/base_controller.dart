@@ -63,7 +63,7 @@ class BaseGetxController extends GetxController {
                 BoxShadow(
                   offset: const Offset(2, 4),
                   blurRadius: 8.1,
-                  color: Colors.black.withOpacity(0.15),
+                  color: Colors.black.withAlpha(15),
                 ),
               ],
             ),

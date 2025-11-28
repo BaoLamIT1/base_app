@@ -41,11 +41,55 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_account.svg
   String get icAccount => 'assets/icons/ic_account.svg';
 
+  /// File path: assets/icons/ic_add_faceid.svg
+  String get icAddFaceid => 'assets/icons/ic_add_faceid.svg';
+
+  /// File path: assets/icons/ic_face_id_between.svg
+  String get icFaceIdBetween => 'assets/icons/ic_face_id_between.svg';
+
+  /// File path: assets/icons/ic_face_id_blink.svg
+  String get icFaceIdBlink => 'assets/icons/ic_face_id_blink.svg';
+
+  /// File path: assets/icons/ic_face_id_down.svg
+  String get icFaceIdDown => 'assets/icons/ic_face_id_down.svg';
+
+  /// File path: assets/icons/ic_face_id_left.svg
+  String get icFaceIdLeft => 'assets/icons/ic_face_id_left.svg';
+
+  /// File path: assets/icons/ic_face_id_right.svg
+  String get icFaceIdRight => 'assets/icons/ic_face_id_right.svg';
+
+  /// File path: assets/icons/ic_face_id_smile.svg
+  String get icFaceIdSmile => 'assets/icons/ic_face_id_smile.svg';
+
+  /// File path: assets/icons/ic_face_id_up.svg
+  String get icFaceIdUp => 'assets/icons/ic_face_id_up.svg';
+
   /// File path: assets/icons/ic_home.svg
   String get icHome => 'assets/icons/ic_home.svg';
 
   /// File path: assets/icons/ic_home_blue.svg
   String get icHomeBlue => 'assets/icons/ic_home_blue.svg';
+
+  /// File path: assets/icons/ic_launcher.png
+  AssetGenImage get icLauncher =>
+      const AssetGenImage('assets/icons/ic_launcher.png');
+
+  /// File path: assets/icons/ic_launcher_alt1.png
+  AssetGenImage get icLauncherAlt1 =>
+      const AssetGenImage('assets/icons/ic_launcher_alt1.png');
+
+  /// File path: assets/icons/ic_launcher_alt2.png
+  AssetGenImage get icLauncherAlt2 =>
+      const AssetGenImage('assets/icons/ic_launcher_alt2.png');
+
+  /// File path: assets/icons/ic_logo_crm.png
+  AssetGenImage get icLogoCrm =>
+      const AssetGenImage('assets/icons/ic_logo_crm.png');
+
+  /// File path: assets/icons/ic_logo_hrm.png
+  AssetGenImage get icLogoHrm =>
+      const AssetGenImage('assets/icons/ic_logo_hrm.png');
 
   /// File path: assets/icons/ic_notification.svg
   String get icNotification => 'assets/icons/ic_notification.svg';
@@ -101,11 +145,27 @@ class $AssetsIconsGen {
   /// File path: assets/icons/icon_snack_bar_warning.svg
   String get iconSnackBarWarning => 'assets/icons/icon_snack_bar_warning.svg';
 
+  /// File path: assets/icons/img.png
+  AssetGenImage get img => const AssetGenImage('assets/icons/img.png');
+
   /// List of all assets
   List<dynamic> get values => [
     icAccount,
+    icAddFaceid,
+    icFaceIdBetween,
+    icFaceIdBlink,
+    icFaceIdDown,
+    icFaceIdLeft,
+    icFaceIdRight,
+    icFaceIdSmile,
+    icFaceIdUp,
     icHome,
     icHomeBlue,
+    icLauncher,
+    icLauncherAlt1,
+    icLauncherAlt2,
+    icLogoCrm,
+    icLogoHrm,
     icNotification,
     icNotificationBlue,
     icUser,
@@ -123,6 +183,7 @@ class $AssetsIconsGen {
     iconSnackBarNotification,
     iconSnackBarSuccess,
     iconSnackBarWarning,
+    img,
   ];
 }
 
@@ -137,6 +198,10 @@ class $AssetsImagesGen {
   AssetGenImage get iconLogo =>
       const AssetGenImage('assets/images/icon_logo.png');
 
+  /// File path: assets/images/img_intruct_liveness.png
+  AssetGenImage get imgIntructLiveness =>
+      const AssetGenImage('assets/images/img_intruct_liveness.png');
+
   /// File path: assets/images/sign_in.jpg
   AssetGenImage get signIn => const AssetGenImage('assets/images/sign_in.jpg');
 
@@ -144,7 +209,13 @@ class $AssetsImagesGen {
   AssetGenImage get signUp => const AssetGenImage('assets/images/sign_up.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [bgAppbar, iconLogo, signIn, signUp];
+  List<AssetGenImage> get values => [
+    bgAppbar,
+    iconLogo,
+    imgIntructLiveness,
+    signIn,
+    signUp,
+  ];
 }
 
 class $AssetsLocalesGen {

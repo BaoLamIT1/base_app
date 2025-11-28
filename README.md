@@ -8,3 +8,11 @@ This contains:
 - BaseTheme
 - LocalesKey to change language vi/en
 .....
+
+## Getting started
+- Add Firebase CLI by running this command 
+ `npm install -g firebase-tools`
+ `dart pub global activate flutterfire_cli`
+ ` flutterfire configure ........`
+after this step you will have firebase_options file in your lib folder
+- 

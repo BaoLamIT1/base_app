@@ -6,7 +6,7 @@ import '../../core/base/app_controller/app_controller.dart';
 import '../../core/values/colors.dart';
 import '../../gen/assets.gen.dart';
 
-class SplashPage extends GetView {
+class SplashPage extends GetView <AppController>{
   const SplashPage({super.key});
 
   @override

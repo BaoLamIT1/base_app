@@ -7,7 +7,7 @@ class AppColors {
   static const textColor2 = Color(0xFF2C77E9);
   static Color colorBoderLiveNess() => const Color(0xFF657EFF);
   static const defaultTextColor = Color(0xFF242E37);
-  static Color bgInviable() => Colors.black.withOpacity(0.8);
+  static Color bgInviable() => Colors.black.withValues(alpha: 0.8);
   static const Color white = Colors.white;
   static const Color black = Colors.black;
   static const Color basicBlack = Color(0xFF1C1C1C);
@@ -66,7 +66,7 @@ class AppColors {
   static const colorGrey2 = Color(0xFF6E7A8E);
   static const basicBlack2 = Color(0xFF2C2C2C);
   static const colorText1 = Color(0xFF1C1C1C);
-  static const MainBlack = Color(0xFF0B0B0B);
+  static const mainBlack = Color(0xFF0B0B0B);
 
   // Muc do tap trung
   static const blueBackground = Color(0xFFEBF5FF);

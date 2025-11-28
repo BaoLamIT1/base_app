@@ -30,7 +30,8 @@ class SdsElevatedButton extends StatelessWidget {
 
   final double? textScaleFactor;
 
-  SdsElevatedButton({
+  const SdsElevatedButton({
+    super.key,
     required this.title,
     required this.onPressed,
     this.loadingBuilder,
@@ -50,14 +51,17 @@ class SdsElevatedButton extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: height,
-      decoration: decoration ??
+      decoration:
+          decoration ??
           BoxDecoration(
-              gradient: LinearGradient(colors: colors),
-              borderRadius: BorderRadius.circular(8)),
+            gradient: LinearGradient(colors: colors),
+            borderRadius: BorderRadius.circular(8),
+          ),
       child: ElevatedButton(
         onPressed: !isLoading ? () => onPressed?.call() : () {},
         onLongPress: onLongPress,
-        style: style ??
+        style:
+            style ??
             ElevatedButton.styleFrom(
               backgroundColor: Colors.transparent,
               foregroundColor: Colors.transparent,
@@ -65,28 +69,31 @@ class SdsElevatedButton extends StatelessWidget {
               elevation: 0,
               padding: EdgeInsets.zero,
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8.0)),
+                borderRadius: BorderRadius.circular(8.0),
+              ),
             ),
         child: Stack(
           children: [
             Center(
-              child: textStyle != null
-                  ? Text(
-                      title,
-                      style: textStyle,
-                      textScaleFactor: textScaleFactor,
-                    )
-                  : TextUtils(
-                      text: title,
-                      color: AppColors.white,
-                      availableStyle: StyleEnum.MbBodyBold,
-                    ),
+              child:
+                  textStyle != null
+                      ? Text(
+                        title,
+                        style: textStyle,
+                        textScaleFactor: textScaleFactor,
+                      )
+                      : TextUtils(
+                        text: title,
+                        color: AppColors.white,
+                        availableStyle: StyleEnum.MbBodyBold,
+                      ),
             ),
             Align(
               alignment: Alignment.centerRight,
               child: Visibility(
                 visible: isLoading && showLoading,
-                child: loadingBuilder ??
+                child:
+                    loadingBuilder ??
                     const SizedBox(
                       height: AppDimens.btnSmall,
                       width: AppDimens.btnSmall,
@@ -97,7 +104,7 @@ class SdsElevatedButton extends StatelessWidget {
                       ),
                     ),
               ).paddingOnly(right: 15),
-            )
+            ),
           ],
         ),
       ),

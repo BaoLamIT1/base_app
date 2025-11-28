@@ -104,7 +104,7 @@ ThemeData getThemeByAppTheme([bool isDarkMode = true]) {
     scaffoldBackgroundColor: AppColors.scaffoldBackgroundColorPrimary,
     cardColor: isDarkMode ? AppColors.dsGray1 : Colors.pink[50],
     secondaryHeaderColor: AppColors.dsGray1,
-    dialogBackgroundColor: AppColors.accentColor,
+    dialogTheme: const DialogThemeData(backgroundColor: AppColors.accentColor),
   );
   // colorScheme: ColorScheme(
   //     background: isDarkMode ? AppColors.backgroundColor : Colors.white54));

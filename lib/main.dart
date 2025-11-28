@@ -75,7 +75,7 @@ class _Application extends State<Application> {
       supportedLocales: AppLocale.supportLocales,
       translationsKeys: AppTranslation.translations,
       debugShowCheckedModeBanner: false,
-      initialRoute: AppRoutes.routeLogIn,
+      initialRoute: AppRoutes.routeSplash,
       getPages: PageRouter.route,
       builder: BotToastInit(),
       localizationsDelegates: AppLocale.localizationsDelegates,

@@ -13,7 +13,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  flutter_localizations:
+    sdk: flutter
   flutter_local_notifications: ^17.2.3
   timezone: ^0.9.4
   permission_handler: ^11.3.1
@@ -26,6 +27,7 @@ dependencies:
   #Google
   google_sign_in: ^6.2.1
   google_fonts: ^6.1.0
+  google_mlkit_face_detection: 0.11.1
 
   #Splash screen
   flutter_native_splash: ^2.4.4
@@ -43,6 +45,7 @@ dependencies:
   get: ^4.6.6
   logger: ^2.1.0
   cached_network_image: ^3.4.1
+  camera: ^0.10.0+5
   pull_to_refresh: ^2.0.0
   hive: ^2.2.3
   localization: ^2.1.1
@@ -63,6 +66,12 @@ dependencies:
   firebase_auth: ^6.1.1
   firebase_core: ^4.2.0
   flutter_launcher_icons: ^0.14.4
+  percent_indicator: ^4.2.3
+  local_auth_android: ^1.0.52
+  local_auth_darwin: ^1.6.0
+  path_provider: ^2.1.5
+  image: ^4.5.4
+  google_mlkit_commons: ^0.8.1
 
 dev_dependencies:
   flutter_test:

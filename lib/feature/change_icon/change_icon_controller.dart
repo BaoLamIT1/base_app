@@ -1,4 +1,3 @@
-import 'package:base_app/core/base/base_controller/base_controller.dart';
 import 'package:base_app/core/core.src.dart';
 import 'package:flutter/services.dart';
 
@@ -25,6 +24,7 @@ class ChangeIconController extends BaseGetxController {
       asset: 'assets/icons/ic_logo_hrm.png',
     ),
   ];
+
   Future<void> changeIcon(String alias) async {
     showLoading();
     try {

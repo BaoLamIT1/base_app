@@ -21,7 +21,7 @@ Widget _buildBody(LoginController controller) {
                       borderRadius: BorderRadius.circular(AppDimens.radius30),
                       boxShadow: [
                         BoxShadow(
-                          color: AppColors.black.withOpacity(0.05),
+                          color: AppColors.black.withValues(alpha: 0.05),
                           // Shadow color
                           spreadRadius: 2,
                           blurRadius: 10,
@@ -97,9 +97,10 @@ Widget _buildBody(LoginController controller) {
 Widget _buildChangeLanguageButton(LoginController controller) {
   return Obx(() {
     // lấy locale hiện tại (nếu LoginController chưa có giá trị thì fallback sang Get.locale)
-    String? selected = controller.languageCodeHome.value.isEmpty
-        ? Get.locale?.languageCode
-        : controller.languageCodeHome.value;
+    String? selected =
+        controller.languageCodeHome.value.isEmpty
+            ? Get.locale?.languageCode
+            : controller.languageCodeHome.value;
     selected = selected?.toLowerCase();
 
     // map languageCode -> flag (có thể tạo helper cho gọn)
@@ -160,10 +161,7 @@ Widget _buildListInput(LoginController controller) {
         _buildPassword(controller),
       ],
     ),
-  ).paddingOnly(
-    left: AppDimens.paddingSmall,
-    right: AppDimens.paddingSmall,
-  );
+  ).paddingOnly(left: AppDimens.paddingSmall, right: AppDimens.paddingSmall);
 }
 
 Widget _buildUserInfoWithChangeBtn(LoginController controller) {
@@ -173,9 +171,7 @@ Widget _buildUserInfoWithChangeBtn(LoginController controller) {
     if (!hasAccount) return _buildAccount(controller);
     return Row(
       children: [
-        Flexible(
-          child: _buildHelloUsername(controller),
-        ),
+        Flexible(child: _buildHelloUsername(controller)),
         sdsSBWidth20,
         GestureDetector(
           onTap: controller.changeAccount,

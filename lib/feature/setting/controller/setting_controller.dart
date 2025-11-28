@@ -1,4 +1,3 @@
-import 'package:base_app/feature/change_icon/change_icon_page.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 
@@ -28,11 +27,6 @@ class SettingController extends BaseGetxController {
   Rx<String> countryCodeHome = ''.obs;
 
   final remember = HIVE_APP.get(AppKey.keyRemember, defaultValue: false);
-
-  @override
-  void onInit() {
-    super.onInit();
-  }
 
   Future<void> changeSettingBiometric(
     bool value, {
