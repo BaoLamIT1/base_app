@@ -78,8 +78,6 @@ class LoginController extends BaseGetxController {
       accountController.text.trim(),
       passwordController.text.trim(),
     );
-    Get.toNamed(AppRoutes.routePageBuilder);
-    showSnackBar("Đăng nhập thành công", typeAction: AppConst.actionSuccess);
   }
 
   void navToHomeWithoutLogIn() {
@@ -129,9 +127,10 @@ class LoginController extends BaseGetxController {
       if (!isAutoLogin) {
         Get.offAndToNamed(AppRoutes.routePageBuilder);
       }
+      showSnackBar("Đăng nhập thành công", typeAction: AppConst.actionSuccess);
       return true;
     } catch (e) {
-      showSnackBar("Error: ${e.toString()}");
+      showSnackBar(LocaleKeys.app_loginFailed.tr);
       return false;
     } finally {
       if (!isAutoLogin) hideLoading();
@@ -183,7 +182,7 @@ class LoginController extends BaseGetxController {
         );
         if (success) {
           // await fetchPersonalInfoControl();
-          Get.offAllNamed(AppRoutes.routeHomePage);
+          Get.offAllNamed(AppRoutes.routePageBuilder);
           showSnackBar(
             LocaleKeys.biometric_authenticationSuccess.tr,
             typeAction: AppConst.actionSuccess,
