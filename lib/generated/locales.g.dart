@@ -133,7 +133,6 @@ class LocaleKeys {
   static const app_no = 'app_no';
   static const app_year = 'app_year';
   static const app_day = 'app_day';
-  static const app_login_experience = 'app_login_experience';
   static const app_loginTitle = 'app_loginTitle';
   static const app_accountTitle = 'app_accountTitle';
   static const app_enterAccountTitle = 'app_enterAccountTitle';
@@ -173,7 +172,6 @@ class LocaleKeys {
   static const app_birthday = 'app_birthday';
   static const app_gender = 'app_gender';
   static const app_cccd = 'app_cccd';
-  // ignore: constant_identifier_names
   static const app_information_parents = 'app_information_parents';
   static const app_phone_parents = 'app_phone_parents';
   static const app_fullName = 'app_fullName';
@@ -373,6 +371,7 @@ class LocaleKeys {
       'editInformation_changePasswordRequire';
   static const editInformation_wrongOldPasswordPleaseTryAgain =
       'editInformation_wrongOldPasswordPleaseTryAgain';
+  static const settings_changeAppIcon = 'settings_changeAppIcon';
   static const app_addFaceFailed = 'app_addFaceFailed';
   static const app_Morning = 'app_Morning';
   static const app_Afternoon = 'app_Afternoon';
@@ -507,7 +506,6 @@ class Locales {
     'app_no': 'No',
     'app_year': 'Year',
     'app_day': 'Day',
-    'app_login_experience': 'Log in to experience School Monitoring now',
     'app_loginTitle': 'Login',
     'app_accountTitle': 'Account',
     'app_enterAccountTitle': 'Enter account',
@@ -746,6 +744,7 @@ class Locales {
         'Your password must be at least 8 characters long and include numbers, uppercase letters, and special characters',
     'editInformation_wrongOldPasswordPleaseTryAgain':
         'Wrong old password, please try again!',
+    'settings_changeAppIcon': 'Change app icon',
   };
   static const vi_VN = {
     'app_send': 'Gửi',
@@ -875,7 +874,6 @@ class Locales {
     'app_no': 'Không',
     'app_year': 'Năm',
     'app_day': 'Ngày',
-    'app_login_experience': 'Đăng nhập để trải nghiệm School Monitoring ngay',
     'app_loginTitle': 'Đăng nhập',
     'app_accountTitle': 'Tài khoản',
     'app_enterAccountTitle': 'Nhập tài khoản',
@@ -1112,5 +1110,6 @@ class Locales {
         'Mật khẩu của bạn phải có tối thiểu 8 ký tự, đồng thời bao gồm cả chữ số, chữ cái in hoa và ký tự đặc biệt',
     'editInformation_wrongOldPasswordPleaseTryAgain':
         'Sai password cũ, vui lòng thử lại!',
+    'settings_changeAppIcon': 'Thay đổi icon ứng dụng',
   };
 }

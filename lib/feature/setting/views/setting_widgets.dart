@@ -84,7 +84,7 @@ Widget _buildChangeIcon(SettingController controller) {
     ),
     child: _buildListTitle(
       Assets.icons.iconLogOut,
-      'change app icon',
+      LocaleKeys.settings_changeAppIcon.tr,
       onTap: () {
         Get.to(const ChangeAppIconScreen());
       },

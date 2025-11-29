@@ -2,6 +2,7 @@
 import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 
@@ -14,6 +15,7 @@ import '../../../../native_method/crypto/crypto_helper.dart';
 import '../../../change_language/view/change_language_page.dart';
 import '../model/login_request_model.dart';
 import '../repository/auth_repository.dart';
+import '../repository/impl/firebase_auth_repository.dart';
 
 class LoginController extends BaseGetxController {
   final formKey = GlobalKey<FormState>();
@@ -57,7 +59,12 @@ class LoginController extends BaseGetxController {
 
   @override
   void onInit() {
+    if (kDebugMode) {
+      accountController.text = "test@gmail.com";
+      passwordController.text = "123456";
+    }
     super.onInit();
+    authRepository = FirebaseAuthRepository();
   }
 
   @override
@@ -71,6 +78,8 @@ class LoginController extends BaseGetxController {
       accountController.text.trim(),
       passwordController.text.trim(),
     );
+    Get.toNamed(AppRoutes.routePageBuilder);
+    showSnackBar("Đăng nhập thành công", typeAction: AppConst.actionSuccess);
   }
 
   void navToHomeWithoutLogIn() {
@@ -118,7 +127,7 @@ class LoginController extends BaseGetxController {
       }
 
       if (!isAutoLogin) {
-        Get.offAndToNamed(AppRoutes.routeHomePage);
+        Get.offAndToNamed(AppRoutes.routePageBuilder);
       }
       return true;
     } catch (e) {

@@ -121,7 +121,6 @@
     "no": "Không",
     "year": "Năm",
     "day": "Ngày",
-    "login_experience": "Đăng nhập để trải nghiệm School Monitoring ngay",
     "loginTitle": "Đăng nhập",
     "accountTitle": "Tài khoản",
     "enterAccountTitle": "Nhập tài khoản",
@@ -344,5 +343,8 @@
     "currentPassword": "Mật khẩu hiện tại",
     "changePasswordRequire": "Mật khẩu của bạn phải có tối thiểu 8 ký tự, đồng thời bao gồm cả chữ số, chữ cái in hoa và ký tự đặc biệt",
     "wrongOldPasswordPleaseTryAgain": "Sai password cũ, vui lòng thử lại!"
+  },
+  "settings": {
+    "changeAppIcon": "Thay đổi icon ứng dụng"
   }
 }

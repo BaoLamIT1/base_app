@@ -122,7 +122,6 @@
     "no": "No",
     "year": "Year",
     "day": "Day",
-    "login_experience": "Log in to experience School Monitoring now",
     "loginTitle": "Login",
     "accountTitle": "Account",
     "enterAccountTitle": "Enter account",
@@ -346,5 +345,8 @@
     "errorPhoneNumberType": "Error phone number type",
     "changePasswordRequire": "Your password must be at least 8 characters long and include numbers, uppercase letters, and special characters",
     "wrongOldPasswordPleaseTryAgain": "Wrong old password, please try again!"
+  },
+  "settings": {
+    "changeAppIcon": "Change app icon"
   }
 }

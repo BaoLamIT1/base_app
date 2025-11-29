@@ -286,7 +286,7 @@ Widget _buildLoginButton(LoginController controller) {
   return Obx(
     () => BaseButton.buildButton(
       LocaleKeys.app_loginTitle.tr,
-      () => controller.navToHomeWithoutLogIn(),
+      () => controller.navToHome(),
       colors: AppColors.colorBtnPrimaryBlue,
       isLoading: controller.isShowLoading.value,
     ).paddingAll(AppDimens.paddingSmall),
