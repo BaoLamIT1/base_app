@@ -9,6 +9,7 @@ import '../../../core/utils/widgets/show_popup.dart';
 import '../../../core/values/key.dart';
 import '../../../generated/locales.g.dart';
 import '../../../native_method/biometric/biometric.dart';
+import '../../authentication/login/repository/impl/firebase_auth_repository.dart';
 
 mixin PopScopeCtrlMixin<T> on BaseGetxController {
   bool get didPop;
@@ -70,10 +71,10 @@ class SettingController extends BaseGetxController {
     }
   }
 
-  void onTapLogout() {
+  Future<void> onTapLogout() async {
     ShowPopup.showDialogConfirm(
       LocaleKeys.app_logoutTitle.tr,
-      confirm: () {
+      confirm: () async {
         HIVE_APP.delete(AppKey.keyToken);
         // // final remember = HIVE_APP.get(AppKey.keyRemember, defaultValue: false);
         // // if (!remember) {
@@ -81,6 +82,7 @@ class SettingController extends BaseGetxController {
         // HIVE_APP.delete(AppKey.keyUsername);
         // HIVE_APP.delete(AppKey.keyPass);
         // //}
+        await FirebaseAuthRepository().logout();
         Get.offAllNamed(AppRoutes.routeLogIn);
       },
       actionTitle: LocaleKeys.app_logout,
