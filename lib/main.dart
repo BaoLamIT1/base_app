@@ -11,13 +11,22 @@ import 'core/route/page_router.dart';
 import 'core/values/app_locale.dart';
 import 'core/values/colors.dart';
 import 'core/values/strings.dart';
+import 'firebase/firebase_message/firebase_messaging_service.dart';
+import 'firebase/firebase_message/local_notifications_service.dart';
+import 'firebase/firebase_options.dart';
 import 'generated/locales.g.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await initHive();
+  final localNotificationsService = LocalNotificationsService.instance();
+  await localNotificationsService.init();
 
+  final firebaseMessagingService = FirebaseMessagingService.instance();
+  await firebaseMessagingService.init(
+    localNotificationsService: localNotificationsService,
+  );
   // Initialize notification service
   await _initializeNotifications();
   runApp(const Application());
